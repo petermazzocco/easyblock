@@ -14,10 +14,10 @@ const Index = () => {
           exit={{ opacity: 0 }}
           transition={{ ease: "easeOut", duration: 0.2, delay: 0.5 }}
         >
-          <h1 className=" mb-4 text-5xl font-thin uppercase text-white">
+          <h1 className=" mb-4 md:text-5xl xs:text-2xl font-thin uppercase text-white">
             Easy<span className="font-black">Block</span>
           </h1>
-          <p className="text-sm font-normal text-gray-200 lg:text-xl">
+          <p className="md:text-lg xs:text-sm font-normal text-gray-200">
             A <span className="font-bold">beginner</span> friendly way to view
             the Ethereum blockchain.
           </p>
@@ -42,21 +42,23 @@ const Index = () => {
         <NavLink to="/blocks">
           <button
             type="button"
-            className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 items-center justify-center inline-flex   h-20 font-medium rounded-lg text-2xl px-5 py-2.5 text-center mr-2 mb-2"
+            className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 items-center justify-center inline-flex  sm:h-20 xs:h-14 font-medium rounded-lg sm:text-2xl xs:text-lg px-5 py-2.5 text-center mr-2 mb-2"
           >
             Previous Blocks
           </button>
         </NavLink>
       </motion.div>
       <motion.div
-        className="mx-20"
+        className="md:mx-20 xs:mx-8"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ ease: "easeOut", duration: 0.2, delay: 1 }}
       >
-        <h2 className="font-bold text-xl">What are Ethereum Blocks?</h2>
-        <p>
+        <h2 className="font-bold md:text-xl xs:text-sm">
+          What are Ethereum Blocks?
+        </h2>
+        <p className="md:text-lg xs:text-xs">
           Simply put, Ethereum blocks hold a{" "}
           <span className="font-thin italic">bunch</span> of transactions. Once
           the block is full of transactions and a dedicated amount of time has

@@ -46,9 +46,11 @@ const Blocks = () => {
                 scale: 1.05,
                 transition: { duration: 0.2 },
               }}
-              className=" block max-w-sm p-6 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 rounded-md cursor-pointer"
+              className=" block max-w-sm sm:p-6 xs:p-4 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 rounded-md cursor-pointer"
             >
-              <p className="text-xl font-extrabold">{blockNumber}</p>
+              <p className="sm:text-xl xs:text-lg font-extrabold">
+                {blockNumber}
+              </p>
             </motion.button>
           </NavLink>
           <motion.button

@@ -49,7 +49,7 @@ const BlocksList = () => {
             <h1 className="text-xl">Recent Blocks</h1>
             <p className="text-lg font-thin italic">Click For More Details</p>
           </div>
-          <div class="grid grid-cols-4 gap-4 mx-40 text-center">
+          <div class="grid md:grid-cols-4 xs:grid-cols-1 place-items-center  xs:w-auto gap-4 mx-40 text-center">
             {blockList.map((block, i) => {
               return (
                 <NavLink to={`${block.number}`}>

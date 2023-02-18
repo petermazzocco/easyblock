@@ -36,7 +36,7 @@ const Transactions = (props) => {
           <CircularProgress color="inherit" />
         </div>
       ) : (
-        <div class="grid grid-cols-5 justify center gap-6 mx-10 truncate  text-ellipsis overflow-hidden ">
+        <div class="grid md:grid-cols-5 xs:grid-cols-1 justify center gap-6 mx-10 truncate  text-ellipsis overflow-hidden ">
           {transactions &&
             transactions.map((tr, i) => {
               return (

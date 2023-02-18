@@ -44,10 +44,14 @@ const TransactionInfo = () => {
   // }, []);
 
   return (
-    <div className="bg-animated bg-fixed bg-center bg-cover h-screen ">
+    <div className="bg-animated bg-fixed bg-center bg-cover h-screen">
       <div className="text-center text-white">
-        <h1 className="text-2xl font-extrabold">Transaction Details</h1>
-        <p className="font-thin text-sm italic pt-2">{tx}</p>
+        <h1 className="sm:text-3xl xs:text-lg font-extrabold">
+          Transaction Details
+        </h1>
+        <p className="font-thin md:text-xl sm:text-md xs:text-xs italic pt-2">
+          {tx}
+        </p>
       </div>
       {!data ? (
         <div className="text-center pt-10">
@@ -55,7 +59,7 @@ const TransactionInfo = () => {
         </div>
       ) : (
         <>
-          <div className="text-white grid justify-center mt-20">
+          <div className="text-white grid justify-center mt-20 xs:pl-10">
             <div className="ml-10 space-y-4">
               <motion.div
                 initial={{ opacity: 0 }}
@@ -63,8 +67,10 @@ const TransactionInfo = () => {
                 exit={{ opacity: 0 }}
                 transition={{ ease: "easeOut", duration: 0.2, delay: 0.2 }}
               >
-                <p className="text-2xl font-bold">Transaction Hash</p>
-                <p>{tx}</p>
+                <p className="sm:text-2xl  xs:text-lg font-bold">
+                  Transaction Hash
+                </p>
+                <p className="sm:text-md xs:text-xs md:text-xl">{tx}</p>
               </motion.div>
               {/* <p className="text-2xl font-bold">Timestamp</p>
               <p>{new Date(timestamp * 1000).toLocaleString()}</p> */}
@@ -74,8 +80,8 @@ const TransactionInfo = () => {
                 exit={{ opacity: 0 }}
                 transition={{ ease: "easeOut", duration: 0.2, delay: 0.4 }}
               >
-                <p className="text-2xl font-bold">Amount</p>
-                <p>{data.value}</p>
+                <p className="sm:text-2xl xs:text-lg font-bold">Amount</p>
+                <p className="sm:text-md xs:text-xs md:text-xl">{data.value}</p>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0 }}
@@ -83,8 +89,8 @@ const TransactionInfo = () => {
                 exit={{ opacity: 0 }}
                 transition={{ ease: "easeOut", duration: 0.2, delay: 0.6 }}
               >
-                <p className="text-2xl font-bold">Receiver</p>
-                <p>{data.to}</p>
+                <p className="sm:text-2xl xs:text-lg font-bold">Receiver</p>
+                <p className="sm:text-md xs:text-xs md:text-xl">{data.to}</p>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0 }}
@@ -92,8 +98,8 @@ const TransactionInfo = () => {
                 exit={{ opacity: 0 }}
                 transition={{ ease: "easeOut", duration: 0.2, delay: 0.8 }}
               >
-                <p className="text-2xl font-bold">Sender</p>
-                <p>{data.from}</p>
+                <p className="sm:text-2xl xs:text-lg font-bold">Sender</p>
+                <p className="sm:text-md xs:text-xs md:text-xl">{data.from}</p>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0 }}
@@ -101,8 +107,10 @@ const TransactionInfo = () => {
                 exit={{ opacity: 0 }}
                 transition={{ ease: "easeOut", duration: 0.2, delay: 1 }}
               >
-                <p className="text-2xl font-bold">Gas Used</p>
-                <p>{data.gasUsed.toString()}</p>
+                <p className="sm:text-2xl xs:text-lg font-bold">Gas Used</p>
+                <p className="sm:text-md xs:text-xs md:text-xl">
+                  {data.gasUsed.toString()}
+                </p>
               </motion.div>
             </div>
           </div>
