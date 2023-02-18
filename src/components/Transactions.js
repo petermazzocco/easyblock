@@ -32,7 +32,9 @@ const Transactions = (props) => {
   return (
     <div>
       {!transactions ? (
-        <CircularProgress color="inherit" />
+        <div className="h-screen text-white">
+          <CircularProgress color="inherit" />
+        </div>
       ) : (
         <div class="grid grid-cols-5 justify center gap-6 mx-10 truncate  text-ellipsis overflow-hidden ">
           {transactions &&

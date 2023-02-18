@@ -83,7 +83,7 @@ const TransactionInfo = () => {
                 exit={{ opacity: 0 }}
                 transition={{ ease: "easeOut", duration: 0.2, delay: 0.6 }}
               >
-                <p className="text-2xl font-bold">Sender</p>
+                <p className="text-2xl font-bold">Receiver</p>
                 <p>{data.to}</p>
               </motion.div>
               <motion.div
@@ -92,7 +92,7 @@ const TransactionInfo = () => {
                 exit={{ opacity: 0 }}
                 transition={{ ease: "easeOut", duration: 0.2, delay: 0.8 }}
               >
-                <p className="text-2xl font-bold">Receiver</p>
+                <p className="text-2xl font-bold">Sender</p>
                 <p>{data.from}</p>
               </motion.div>
               <motion.div

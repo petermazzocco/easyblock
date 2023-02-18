@@ -21,7 +21,7 @@ const BlocksList = () => {
       try {
         const blockNumber = await alchemy.core.getBlockNumber();
         setBlockNumber(blockNumber);
-        for (let i = blockNumber; i >= blockNumber - 11; i--) {
+        for (let i = blockNumber; i >= blockNumber - 51; i--) {
           const block = await alchemy.core.getBlock(i);
           listBlocks.push(block);
         }
@@ -32,16 +32,12 @@ const BlocksList = () => {
     }
 
     getBlocks();
-    const interval = setInterval(() => {
-      getBlocks();
-    }, 5000);
-    return () => clearInterval(interval);
   }, [blockNumber]);
 
   return (
-    <div className=" h-screen text-white">
+    <div className="bg-animated bg-fixed bg-cover bg-center text-white">
       {!blockList ? (
-        <div className="pb-10 pt-10 text-center">
+        <div className="h-screen pb-10 pt-10 text-center">
           <h1 className="text-xl">Fetching Blocks</h1>
           <div className="pt-10">
             <CircularProgress color="inherit" />
@@ -56,7 +52,7 @@ const BlocksList = () => {
           <div class="grid grid-cols-4 gap-4 mx-40 text-center">
             {blockList.map((block, i) => {
               return (
-                <NavLink to={`/${block.number}`}>
+                <NavLink to={`${block.number}`}>
                   <div
                     key={i}
                     className="block max-w-sm p-6 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 rounded-md cursor-pointer"

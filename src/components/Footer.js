@@ -3,7 +3,7 @@ import logo from "../img/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="p-4 flex flex-row space-x-4 fixed bottom-0">
+    <footer className="p-4 flex flex-row space-x-4 bottom-0">
       <p className="text-xs text-white">Developed by</p>
       <a
         href="https://linkedin.com/in/petermazzocco"

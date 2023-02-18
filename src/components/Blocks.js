@@ -24,12 +24,12 @@ const Blocks = () => {
       }
     }
     getBlocks();
-    const interval = setInterval(() => {
-      getBlocks();
-    }, 5000);
-    return () => clearInterval(interval);
     //eslint-disable-next-line
   }, [blockNumber]);
+
+  const refresh = () => {
+    window.location.reload();
+  };
 
   return (
     <div className="grid justify-center">
@@ -43,7 +43,7 @@ const Blocks = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               whileHover={{
-                scale: 1.2,
+                scale: 1.05,
                 transition: { duration: 0.2 },
               }}
               className=" block max-w-sm p-6 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 rounded-md cursor-pointer"
@@ -51,7 +51,16 @@ const Blocks = () => {
               <p className="text-xl font-extrabold">{blockNumber}</p>
             </motion.button>
           </NavLink>
-          <p className="text-xs font-thin pt-2">Updates Every 5 Seconds</p>
+          <motion.button
+            className="pt-2"
+            whileHover={{
+              scale: 1.05,
+              transition: { duration: 0.2 },
+            }}
+            onClick={refresh}
+          >
+            Refresh
+          </motion.button>
         </div>
       )}
     </div>
