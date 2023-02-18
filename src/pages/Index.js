@@ -1,6 +1,5 @@
 import Blocks from "../components/Blocks";
 import { NavLink } from "react-router-dom";
-import SearchBar from "../components/SearchBar";
 import { motion } from "framer-motion";
 
 const Index = () => {

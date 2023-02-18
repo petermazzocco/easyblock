@@ -30,7 +30,7 @@ const SoloTransaction = (props) => {
       {!transactions ? (
         <CircularProgress color="inherit" />
       ) : (
-        <div class="grid grid-cols-4 justify center gap-6 mx-10 ">
+        <div className="grid grid-cols-4 justify center gap-6 mx-10 ">
           {transactions &&
             transactions.map((tr, i) => {
               return (
