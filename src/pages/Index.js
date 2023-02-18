@@ -1,5 +1,6 @@
 import Blocks from "../components/Blocks";
 import SearchBar from "../components/SearchBar";
+// import { motion } from "framer-motion";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
         </div>
         <div className="text-center flex-initial w-1/2">
           <p className="pb-2 font-bold">Most Recent Block:</p>
+
           <Blocks />
         </div>
       </div>

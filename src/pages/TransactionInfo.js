@@ -2,6 +2,7 @@ import { Alchemy, Network } from "alchemy-sdk";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { CircularProgress } from "@mui/material";
+import { motion } from "framer-motion";
 
 const settings = {
   apiKey: process.env.REACT_APP_ALCHEMY_API_KEY,
@@ -56,18 +57,53 @@ const TransactionInfo = () => {
         <>
           <div className="text-white grid justify-center mt-20">
             <div className="ml-10 space-y-4">
-              <p className="text-2xl font-bold">Transaction Hash</p>
-              <p>{tx}</p>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ ease: "easeOut", duration: 0.2, delay: 0.2 }}
+              >
+                <p className="text-2xl font-bold">Transaction Hash</p>
+                <p>{tx}</p>
+              </motion.div>
               {/* <p className="text-2xl font-bold">Timestamp</p>
               <p>{new Date(timestamp * 1000).toLocaleString()}</p> */}
-              <p className="text-2xl font-bold">Amount</p>
-              <p>{data.value}</p>
-              <p className="text-2xl font-bold">Sender</p>
-              <p>{data.to}</p>
-              <p className="text-2xl font-bold">Receiver</p>
-              <p>{data.from}</p>
-              <p className="text-2xl font-bold">Gas Used</p>
-              <p>{data.gasUsed.toString()}</p>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ ease: "easeOut", duration: 0.2, delay: 0.4 }}
+              >
+                <p className="text-2xl font-bold">Amount</p>
+                <p>{data.value}</p>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ ease: "easeOut", duration: 0.2, delay: 0.6 }}
+              >
+                <p className="text-2xl font-bold">Sender</p>
+                <p>{data.to}</p>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ ease: "easeOut", duration: 0.2, delay: 0.8 }}
+              >
+                <p className="text-2xl font-bold">Receiver</p>
+                <p>{data.from}</p>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ ease: "easeOut", duration: 0.2, delay: 1 }}
+              >
+                <p className="text-2xl font-bold">Gas Used</p>
+                <p>{data.gasUsed.toString()}</p>
+              </motion.div>
             </div>
           </div>
           {/* <div className="mx-20 text-white mt-20 ">

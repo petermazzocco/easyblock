@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import React from "react";
 import { CircularProgress } from "@mui/material";
 import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const settings = {
   apiKey: process.env.REACT_APP_ALCHEMY_API_KEY,
@@ -37,9 +38,18 @@ const Blocks = () => {
       ) : (
         <div className="text-center grid justify-center">
           <NavLink to={`blocks/${blockNumber}`}>
-            <button className=" block max-w-sm p-6 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 rounded-md cursor-pointer">
+            <motion.button
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              whileHover={{
+                scale: 1.2,
+                transition: { duration: 0.2 },
+              }}
+              className=" block max-w-sm p-6 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 rounded-md cursor-pointer"
+            >
               <p className="text-xl font-extrabold">{blockNumber}</p>
-            </button>
+            </motion.button>
           </NavLink>
           <p className="text-xs font-thin pt-2">Updates Every 5 Seconds</p>
         </div>

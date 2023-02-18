@@ -1,6 +1,7 @@
 import { Alchemy, Network } from "alchemy-sdk";
 import { useEffect, useState } from "react";
 import { CircularProgress } from "@mui/material";
+import { motion } from "framer-motion";
 
 const settings = {
   apiKey: process.env.REACT_APP_ALCHEMY_API_KEY,
