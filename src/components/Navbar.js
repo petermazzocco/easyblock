@@ -11,10 +11,12 @@ const Navbar = () => {
           </NavLink>
         </div>
         <div className="grid justify-center">
-          <h1 className="text-2xl font-thin uppercase">
+          <h1 className="md:text-2xl sm:text-xl xs:text-lg font-thin uppercase">
             Easy<span className="font-black">Block</span>
           </h1>
-          <p className="text-xs font-thin">ETH Block Explorer</p>
+          <p className="text-xs font-thin xs:invisible sm:visible">
+            ETH Block Explorer
+          </p>
         </div>
       </nav>
     </div>

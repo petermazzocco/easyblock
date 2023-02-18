@@ -6,50 +6,54 @@ import { motion } from "framer-motion";
 const Index = () => {
   return (
     <div className="h-screen text-white w-screen">
-      <div className="flex place-items-center align-middle h-1/2">
+      <div className="sm:flex xs:grid xs:space-x-3 sm:space-x-0 place-items-center justify-evenly align-middle h-1/3">
         <motion.div
-          className="pl-10 flex-initial w-1/2"
+          className="sm:pl-10 xs:pl-0 flex-initial w-1/2"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ ease: "easeOut", duration: 0.2, delay: 0.5 }}
         >
-          <h1 className=" mb-4 md:text-5xl xs:text-2xl font-thin uppercase text-white">
+          <h1 className="sm:mb-4 xs:mb-1 md:text-5xl xs:text-2xl font-thin uppercase text-white">
             Easy<span className="font-black">Block</span>
           </h1>
-          <p className="md:text-lg xs:text-sm font-normal text-gray-200">
+          <p className="md:text-lg sm:text-sm xs:text-xs font-normal text-gray-200">
             A <span className="font-bold">beginner</span> friendly way to view
             the Ethereum blockchain.
           </p>
         </motion.div>
         <div></div>
-        <div className="text-center flex-initial w-1/2">
-          <p className="pb-2 font-bold">Most Recent Block:</p>
+        <div className="text-center flex-initial xs:pt-5">
+          <p className="xs:text-sm sm:text-lg pb-2 font-bold">
+            Most Recent Block:
+          </p>
           <Blocks />
         </div>
       </div>
       <motion.div
-        className="text-center mt-2 mb-20 grid justify-center"
+        className="text-center mt-2 mb-20 grid justify-center xs:pt-5"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ ease: "easeOut", duration: 0.2, delay: 0.8 }}
       >
-        <h1 className="text-xl font-bold pb-2">Looking for more blocks?</h1>
+        <h1 className="sm:text-xl xs:text-md font-bold pb-2">
+          Looking for more blocks?
+        </h1>
         {/* <div className="pt-2 ">
           <SearchBar />
         </div> */}
         <NavLink to="/blocks">
           <button
             type="button"
-            className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 items-center justify-center inline-flex  sm:h-20 xs:h-14 font-medium rounded-lg sm:text-2xl xs:text-lg px-5 py-2.5 text-center mr-2 mb-2"
+            className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 items-center justify-center inline-flex  sm:h-20 xs:h-14 font-medium rounded-lg sm:text-2xl xs:text-lg px-5 py-2.5 text-center mr-2 sm:mb-2 xs:mb-0"
           >
             Previous Blocks
           </button>
         </NavLink>
       </motion.div>
       <motion.div
-        className="md:mx-20 xs:mx-8"
+        className="md:mx-20 xs:mx-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
