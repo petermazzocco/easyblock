@@ -15,11 +15,14 @@ const alchemy = new Alchemy(settings);
 const Transactions = (props) => {
   // const { tx } = useParams();
   const [transactions, setTransactions] = useState();
+  // const [timestamp, setTimestamp] = useState();
+
   useEffect(() => {
     async function getTransactions() {
       try {
         const data = await alchemy.core.getBlockWithTransactions(props.block);
         setTransactions(data.transactions);
+        // setTimestamp(data.timestamp);
         console.log("Transactions are listed");
       } catch {
         console.log("Couldn't get transactions");
@@ -37,6 +40,7 @@ const Transactions = (props) => {
         </div>
       ) : (
         <div className="grid lg:grid-cols-5 md:grid-cols-3 xs:grid-cols-1 justify center gap-6 mx-10 truncate text-ellipsis overflow-hidden ">
+          {/* <p>{new Date(timestamp * 1_000).toLocaleString()}</p> */}
           {transactions &&
             transactions.map((tr, i) => {
               return (

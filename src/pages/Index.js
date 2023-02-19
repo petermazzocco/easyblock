@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Index = () => {
   return (
-    <div className="h-screen text-white w-screen">
+    <div className="h-screen text-white">
       <div className="sm:flex xs:grid xs:space-x-3 sm:space-x-0 place-items-center justify-evenly align-middle h-1/3">
         <motion.div
           className="sm:pl-10 xs:pl-0 flex-initial w-1/2"
@@ -13,16 +13,15 @@ const Index = () => {
           exit={{ opacity: 0 }}
           transition={{ ease: "easeOut", duration: 0.2, delay: 0.5 }}
         >
-          <h1 className="sm:mb-4 xs:mb-1 md:text-5xl xs:text-2xl font-thin uppercase text-white">
+          <h1 className=" xs:text-center sm:text-left sm:mb-4 xs:mb-1 md:text-5xl xs:text-3xl font-thin uppercase text-white">
             Easy<span className="font-black">Block</span>
           </h1>
-          <p className="md:text-lg sm:text-sm xs:text-xs font-normal text-gray-200">
+          <p className="md:text-lg sm:text-sm xs:text-sm font-normal text-gray-200">
             A <span className="font-bold">beginner</span> friendly way to view
             the Ethereum blockchain.
           </p>
         </motion.div>
-        <div></div>
-        <div className="text-center flex-initial xs:pt-5">
+        <div className="text-center xs:pt-5">
           <p className="xs:text-sm sm:text-lg pb-2 font-bold">
             Most Recent Block:
           </p>

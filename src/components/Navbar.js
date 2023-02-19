@@ -14,7 +14,7 @@ const Navbar = () => {
           <h1 className="md:text-2xl sm:text-xl xs:text-lg font-thin uppercase">
             Easy<span className="font-black">Block</span>
           </h1>
-          <p className="text-xs font-thin xs:invisible sm:visible">
+          <p className="text-xs font-thin sm:invisible xs:visible">
             ETH Block Explorer
           </p>
         </div>

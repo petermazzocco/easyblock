@@ -13,6 +13,7 @@ const settings = {
 const alchemy = new Alchemy(settings);
 const Blocks = () => {
   const [blockNumber, setBlockNumber] = useState();
+  // const [timestamp, setTimestamp] = useState();
 
   useEffect(() => {
     async function getBlocks() {
@@ -26,10 +27,6 @@ const Blocks = () => {
     getBlocks();
     //eslint-disable-next-line
   }, [blockNumber]);
-
-  const refresh = () => {
-    window.location.reload();
-  };
 
   return (
     <div className="grid justify-center">
@@ -53,16 +50,6 @@ const Blocks = () => {
               </p>
             </motion.button>
           </NavLink>
-          <motion.button
-            className="pt-2"
-            whileHover={{
-              scale: 1.05,
-              transition: { duration: 0.2 },
-            }}
-            onClick={refresh}
-          >
-            Refresh
-          </motion.button>
         </div>
       )}
     </div>
