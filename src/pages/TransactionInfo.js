@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { CircularProgress } from "@mui/material";
 import { motion } from "framer-motion";
+// import { ethers, BigNumber } from "ethers";
 
 const settings = {
   apiKey: process.env.REACT_APP_ALCHEMY_API_KEY,
@@ -92,9 +93,9 @@ const TransactionInfo = () => {
                 exit={{ opacity: 0 }}
                 transition={{ ease: "easeOut", duration: 0.2, delay: 1 }}
               >
-                <p className="sm:text-2xl xs:text-lg font-bold">Gas Used</p>
+                <p className="sm:text-2xl xs:text-lg font-bold">Price of Gas</p>
                 <p className="sm:text-md xs:text-xs md:text-xl">
-                  {data.gasUsed}
+                  {parseFloat(data.gasPrice)}
                 </p>
               </motion.div>
             </div>
