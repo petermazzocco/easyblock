@@ -1,6 +1,7 @@
 import Blocks from "../components/Blocks";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
+// import SearchBar from "../components/SearchBar";
 
 const Index = () => {
   return (
@@ -38,9 +39,6 @@ const Index = () => {
         <h1 className="sm:text-xl xs:text-md font-bold pb-2">
           Looking for more blocks?
         </h1>
-        {/* <div className="pt-2 ">
-          <SearchBar />
-        </div> */}
         <NavLink to="/blocks">
           <button
             type="button"
@@ -49,6 +47,10 @@ const Index = () => {
             Previous Blocks
           </button>
         </NavLink>
+        {/* <p>Enter Your Address</p> */}
+        {/* <div className="py-2 ">
+          <SearchBar />
+        </div> */}
       </motion.div>
       <motion.div
         className="md:mx-20 xs:mx-4"

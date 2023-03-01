@@ -33,8 +33,8 @@ const TransactionInfo = () => {
         <h1 className="sm:text-3xl xs:text-lg font-extrabold">
           Transaction Details
         </h1>
-        <p className="font-thin md:text-xl sm:text-md xs:text-xs italic pt-2">
-          {tx.slice(0, 2) + "..." + tx.slice(50)}
+        <p className="font-thin md:text-xl sm:text-md xs:text-[8px] italic pt-2">
+          {tx}
         </p>
       </div>
       {!data ? (
@@ -54,9 +54,7 @@ const TransactionInfo = () => {
                 <p className="sm:text-2xl  xs:text-lg font-bold">
                   Transaction Hash
                 </p>
-                <p className="sm:text-md xs:text-xs md:text-xl">
-                  {tx.slice(0, 2) + "..." + tx.slice(50)}
-                </p>
+                <p className="sm:text-md xs:text-[8px] md:text-xl">{tx}</p>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0 }}
@@ -97,6 +95,15 @@ const TransactionInfo = () => {
                 <p className="sm:text-md xs:text-xs md:text-xl">
                   {parseFloat(data.gasPrice)}
                 </p>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ ease: "easeOut", duration: 0.2, delay: 1.2 }}
+              >
+                <p className="sm:text-2xl xs:text-lg font-bold">Nonce</p>
+                <p className="sm:text-md xs:text-xs md:text-xl">{data.nonce}</p>
               </motion.div>
             </div>
           </div>
