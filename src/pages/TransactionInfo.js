@@ -93,7 +93,7 @@ const TransactionInfo = () => {
               >
                 <p className="sm:text-2xl xs:text-lg font-bold">Price of Gas</p>
                 <p className="sm:text-md xs:text-xs md:text-xl">
-                  {parseFloat(data.gasPrice)}
+                  {parseInt(data.gasPrice)}
                 </p>
               </motion.div>
               <motion.div
