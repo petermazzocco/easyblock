@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { CircularProgress } from "@mui/material";
 import { motion } from "framer-motion";
-// import { ethers, BigNumber } from "ethers";
 
 const settings = {
   apiKey: process.env.REACT_APP_ALCHEMY_API_KEY,

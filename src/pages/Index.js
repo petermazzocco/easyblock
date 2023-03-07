@@ -1,7 +1,7 @@
 import Blocks from "../components/Blocks";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
-// import SearchBar from "../components/SearchBar";
+import SearchBar from "../components/SearchBar";
 
 const Index = () => {
   return (
@@ -30,27 +30,34 @@ const Index = () => {
         </div>
       </div>
       <motion.div
-        className="text-center mt-2 mb-20 grid justify-center xs:pt-5"
+        className="text-center mt-2 mb-20 flex flex-row row-span-2 space-x-72 justify-center xs:pt-5"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ ease: "easeOut", duration: 0.2, delay: 0.8 }}
       >
-        <h1 className="sm:text-xl xs:text-md font-bold pb-2">
-          Looking for more blocks?
-        </h1>
-        <NavLink to="/blocks">
-          <button
-            type="button"
-            className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 items-center justify-center inline-flex  sm:h-20 xs:h-14 font-medium rounded-lg sm:text-2xl xs:text-lg px-5 py-2.5 text-center mr-2 sm:mb-2 xs:mb-0"
-          >
-            Previous Blocks
-          </button>
-        </NavLink>
-        {/* <p>Enter Your Address</p> */}
-        {/* <div className="py-2 ">
-          <SearchBar />
-        </div> */}
+        <div className="grid justify-center">
+          <p className="sm:text-xl xs:text-md font-bold pt-4 pb-1">
+            Want to find your transactions?
+          </p>
+          <p className="font-thin pb-1">Enter your address:</p>
+          <div>
+            <SearchBar />
+          </div>
+        </div>
+        <div className="grid justify-center">
+          <h1 className="sm:text-xl xs:text-md font-bold pb-2">
+            Looking for more blocks?
+          </h1>
+          <NavLink to="/blocks">
+            <button
+              type="button"
+              className="  text-white hover:text-gray-900 bg-transparent border-2 focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 items-center justify-center inline-flex  sm:h-20 xs:h-14 font-medium rounded-lg sm:text-2xl xs:text-lg px-5 py-2.5 text-center mr-2 sm:mb-2 xs:mb-0"
+            >
+              Previous Blocks
+            </button>
+          </NavLink>
+        </div>
       </motion.div>
       <motion.div
         className="md:mx-20 xs:mx-4"

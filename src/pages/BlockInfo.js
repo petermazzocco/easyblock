@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Outlet, useParams } from "react-router-dom";
 import Transactions from "../components/Transactions";
 
 const BlockInfo = () => {
@@ -31,6 +31,7 @@ const BlockInfo = () => {
         </p>
         <Transactions block={block} />
       </div>
+      <Outlet />
     </div>
   );
 };
