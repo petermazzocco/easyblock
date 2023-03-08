@@ -15,6 +15,7 @@ const SearchBar = () => {
           placeholder="COMING SOON"
           className="px-4 py-2 text-black rounded-sm cursor-not-allowed"
           disabled
+          onSubmit={handleSubmit}
         />
       </form>
     </div>
